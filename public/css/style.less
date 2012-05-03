@@ -1,0 +1,301 @@
+body, div, span, p, h1, h2, h3, h4, h5, h6, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+section, article, footer {
+    display: block;
+}
+
+body {
+    background-color: #f0f0f0;
+    background-image: url('../img/bg.gif');
+    
+    header {
+        .linear-gradient(top, rgb(198,90,88) 0%, rgb(187,56,52) 50%);
+        border-bottom: 1px solid rgb(187,56,52);
+        .box-shadow(inset 0 -2px 3px rgba(255,255,255,0.2));
+        width: 100%;
+        height: 48px;
+
+        .container {
+            width: 960px;
+            margin: auto;
+            .logo {
+                float: left;
+                width: 20px;
+                position: relative;
+                top: 10px;
+                margin-left: 30px;
+            }
+            h1 {
+                float: left;
+                font: 20px/2.5 'Nova Flat';
+                color: rgba(255,255,255,1);
+                text-shadow: 0px 1px 0px #961701;        
+                padding-left: 10px;
+            }
+            .social {
+                width: auto;
+                float: right;
+                position: relative;
+                top: 17px;
+                .fb {
+                    display:inline-block;
+                    position: relative;
+                    top: -3px;
+                    z-index: 0;
+                }
+            }
+        }
+
+        &:after {
+            background: white;
+            border-bottom: 1px solid rgb(191,191,191);
+            content: '';
+            width: 100%;
+            height: 2px;
+            top: 50px;
+            left: 0;
+            position: absolute;
+        }
+    }
+    
+    .main {
+        width: 960px;
+        margin: auto;
+        
+        ul.steps {
+            list-style: none;
+            margin: 50px 0 10px 140px;
+            li {
+                display: inline-block;
+                position: relative;
+                width: 24%;
+                color: rgba(70,130,204,1);
+                font: 15px 'Nova Flat';
+                text-shadow: white 0 1px 0;
+            }
+            li:before {
+                .border-radius(50px);
+                border: 4px solid hsla(0,0%,100%,0.5);
+                margin: 6px;
+                bottom: 0;
+                content: attr(data-step);
+                font: 15px/1.6 arial;
+                color: #f0f0f0;
+                font-style: italic;
+                text-shadow: rgba(0,0,0,0.5) 0px 0px 2px;
+                font-weight: bold;
+                text-align: center;
+                height: 25px;
+                position: relative;
+                left: -10px;
+                width: 25px;
+                display: inline-block;
+                .box-shadow(inset 0 1px 1px hsla(0,0%,0%,.25), inset 0 -1px 1px hsla(0,0%,100%,0.25));
+                .transition(all 0.3s ease-in-out);
+                background: rgba(80,150,255,0.75);
+            }    
+            li.active:before {
+                border-width: 10px;
+                margin: 0px;
+            }
+        }
+        
+        .drop-area {
+            padding: 10px;
+            width: 100%;
+            height: 450px;
+            .border-radius(10px);
+            &.active {
+                border: 10px dashed rgba(255,102,102,0.8);
+                padding: 0;
+            }
+            .drop-inner {
+                background: rgba(0,0,0,0.05);
+                .box-shadow(inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 1px rgba(255,255,255,1));
+                padding-top: 50px;
+                .border-radius(5px);
+                text-align: center;
+                width: 100%;
+                height: 400px;
+                position: relative;
+                .dropda, .lelink, .wait {
+                    font: 45px 'Londrina Sketch';
+                    color: rgba(0,0,0,0.4);
+                    text-shadow: white 0px 1px;
+                    .clip {
+                        position: relative;
+                        top: 0px;
+                        width: 30px;
+                        margin-right: 10px;
+                    }
+                }
+                .anyfile, .useonce {
+                    margin-top: 20px;
+                    font: 20px 'Unkempt';
+                    color: rgba(0,0,0,0.5);
+                    text-shadow: white 0px 1px;
+                }
+                .link {
+                    position: relative;
+                    margin-top: 30px;
+                    width: 300px;
+                    padding: 3px 20px;
+                    border-radius: 5px;
+                    border: 0;
+                    background-color: rgba(0,0,0,0.5);
+                    .box-shadow(inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 1px rgba(255,255,255,0.25), 0px 0px 15px rgba(0,0,0,0.25));
+                    font: 20px 'Nova Flat';
+                    color: white;
+                    z-index: 100;
+                }
+                .thanks, .done, .abort {
+                    position: relative;
+                    margin-top: 30px;
+                    padding: 3px 20px;
+                    .border-radius(20px);
+                    border: 0;
+                    font: 30px 'Nova Flat';
+                    text-shadow: black 0px 3px 25px;
+                    color: white;
+                    z-index: 100;
+                }
+                .demo {
+                    position: absolute;
+                    bottom: 30px;
+                    text-align: center;
+                    width: 100%;
+                }
+                .progress {
+                    position: relative;
+                    background: #555;
+                    border: 1px solid #161616;
+                    .border-radius(2px);
+                    .box-shadow(inset 0 5px 10px hsla(0,0%,0%,.25), 0 1px 1px hsla(0,0%,100%,.1));
+                    height: 12px;
+                    width: 300px;
+                    margin: auto;
+                    margin-top: 70px;
+                    .progress-bar {
+                        background-image: -webkit-linear-gradient(left, hsla(0,0%,100%,.075) 25%, transparent 25%),
+                                          -webkit-linear-gradient(-45deg, #f66, #fc6, #ff6, #6cf);
+                        background-image:    -moz-linear-gradient(left, hsla(0,0%,100%,.075) 25%, transparent 25%),
+                                             -moz-linear-gradient(-45deg, #f66, #fc6, #ff6, #6cf);
+                        background-image:     -ms-linear-gradient(left, hsla(0,0%,100%,.075) 25%, transparent 25%),
+                                              -ms-linear-gradient(-45deg, #f66, #fc6, #ff6, #6cf);
+                        background-image:      -o-linear-gradient(left, hsla(0,0%,100%,.075) 25%, transparent 25%),
+                                               -o-linear-gradient(-45deg, #f66, #fc6, #ff6, #6cf);
+                        background-image:      linear-gradient(left, hsla(0,0%,100%,.075) 25%, transparent 25%),
+                                               linear-gradient(-45deg, #f66, #fc6, #ff6, #6cf);
+                        background-size: 3px 3px, 100% 100%;
+                        .border-radius(2px);
+                        .box-shadow(inset 0 1px 1px hsla(0,0%,100%,.25), inset 0 -1px 1px hsla(0,0%,0%,.25));
+                        height: 100%;
+                        position: relative;
+                        &:after {
+                            background: rgba(0,0,0,.75);
+                            .border-radius(3px);
+                            .box-shadow(inset 0 0 0 1px hsla(0,0%,0%,1),
+                                        inset 0 1px 2px hsla(0,0%,100%,.25),
+                                        0 1px 2px hsla(0,0%,0%,.25));
+                            color: #fff;
+                            text-shadow: none;
+                            content: attr(data-time);
+                            font: 12px/1 sans-serif;
+                            padding: 6px 0;
+                            position: absolute;
+                            right: -17px;
+                            bottom: 19px;
+                            text-align: center;
+                            width: 36px;
+                        }
+                        &:before {
+                            border-left: 6px solid transparent;
+                            border-top: 6px solid hsla(0,0%,0%,0.9);
+                            border-right: 6px solid transparent;
+                            bottom: 14px;
+                            content: '';
+                            height: 0;
+                            position: absolute;
+                            right: -5px;
+                            width: 0;
+                        }
+                    }    
+                }
+            }
+        }
+        
+    }
+    
+    .lepel {
+        .radial-gradient(50% 50%, ellipse closest-corner, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+        .transition(all 0.3s ease-in-out);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    
+    footer {
+        margin: 30px 0 20px;
+        color: #888;
+        text-align: center;
+        font: 12px 'Nova Flat';
+        a {
+            color: #aaa;
+            text-decoration: none;
+        }
+    }
+    
+}
+
+/* Browser prefix templates */
+.opacity(@a) {
+    opacity: @a;
+    @ie-opacity: 100 * @a;
+    filter: e(%("alpha(opacity=%s)", @ie-opacity));
+}
+.border-radius(@a) {
+    -webkit-border-radius: @a;
+    -moz-border-radius: @a;
+    border-radius: @a;
+}
+.box-shadow(@a) {
+    -webkit-box-shadow: @a;
+    -moz-box-shadow: @a;
+    box-shadow: @a;
+}
+.box-shadow(@a, @b) {
+    -webkit-box-shadow: @a, @b;
+    -moz-box-shadow: @a, @b;
+    box-shadow: @a, @b;
+}
+.box-shadow(@a, @b, @c) {
+    -webkit-box-shadow: @a, @b, @c;
+    -moz-box-shadow: @a, @b, @c;
+    box-shadow: @a, @b, @c;
+}
+.radial-gradient(@a, @b, @c, @d) {
+    background-image: -webkit-radial-gradient(@a, @b, @c, @d);
+    background-image: -moz-radial-gradient(@a, @b, @c, @d);
+    background-image: -ms-radial-gradient(@a, @b, @c, @d);
+    background-image: -o-radial-gradient(@a, @b, @c, @d);
+    background-image: radial-gradient(@a, @b, @c, @d);
+}
+.linear-gradient(@a, @b, @c) {
+    background-image: -webkit-linear-gradient(@a, @b, @c);
+    background-image: -moz-linear-gradient(@a, @b, @c);
+    background-image: -ms-linear-gradient(@a, @b, @c);
+    background-image: -o-linear-gradient(@a, @b, @c);
+    background-image: linear-gradient(@a, @b, @c);
+}
+.transition(@a) {
+    -webkit-transition: @a;
+    -moz-transition: @a;
+    -o-transition: @a;
+    transition: @a;
+}
