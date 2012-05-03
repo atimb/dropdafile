@@ -1,5 +1,6 @@
 export PORT=80
 while [ 1 ]
 do
-    node lib/dropdafile.js >access.log 2>error.log
+    node lib/dropdafile.js >> access.log 2>> error.log
+    sleep 1
 done
