@@ -9,7 +9,7 @@ section, article, footer {
 
 body {
     background-color: #f0f0f0;
-    background-image: url('../img/bg.gif');
+    background-image: url('../img/bg.png');
     
     header {
         .linear-gradient(top, rgb(198,90,88) 0%, rgb(187,56,52) 50%);
@@ -113,7 +113,7 @@ body {
                 padding: 0;
             }
             .drop-inner {
-                background: rgba(0,0,0,0.05);
+                background: url(../img/noise.png);
                 .box-shadow(inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 1px rgba(255,255,255,1));
                 padding-top: 50px;
                 .border-radius(5px);
@@ -149,6 +149,13 @@ body {
                     .box-shadow(inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 1px rgba(255,255,255,0.25), 0px 0px 15px rgba(0,0,0,0.25));
                     font: 20px 'Nova Flat';
                     color: white;
+                    z-index: 100;
+                }
+                .qrcode {
+                    position: relative;
+                    display: block;
+                    margin: 20px auto;
+                    .box-shadow(inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 1px rgba(255,255,255,0.25), 0px 0px 15px rgba(0,0,0,0.25));
                     z-index: 100;
                 }
                 .thanks, .done, .abort {

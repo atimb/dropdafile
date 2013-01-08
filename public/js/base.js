@@ -76,6 +76,7 @@ var Upload = {
                 this.select();
             });
             $('.link').val('http://dropdafile.com/' + id).show();
+            $('.qrcode').attr('src', 'http://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=' + encodeURIComponent(id)).show();
             $('.lepel').show().css({opacity: 1});
         }
         var data = {
@@ -96,7 +97,7 @@ var Upload = {
     },
 
     sendFile: function(file, id) {
-        $('.link,.lelink,.useonce').hide();
+        $('.link,.qrcode,.lelink,.useonce').hide();
         $('.progress,.wait').show();
         $('.steps li:eq(2)').removeClass('active');
         $('.steps li:eq(3)').addClass('active');
