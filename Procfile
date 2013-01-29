@@ -1,1 +1,1 @@
-web: node lib/dropdafile.js
+web: node ./lib/dropdafile.js
