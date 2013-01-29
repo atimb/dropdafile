@@ -76,7 +76,7 @@ var Upload = {
                 this.select();
             });
             $('.link').val('http://dropdafile.com/' + id).show();
-            $('.qrcode').attr('src', 'http://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=' + encodeURIComponent(id)).show();
+            $('.qrcode').attr('src', 'http://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=' + encodeURIComponent('http://dropdafile.com/' + id)).show();
             $('.lepel').show().css({opacity: 1});
         }
         var data = {
