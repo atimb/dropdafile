@@ -1,4 +1,4 @@
-# dropdafile
+# dropdafile [![Build Status](https://travis-ci.org/atimb/dropdafile.png)](https://travis-ci.org/atimb/dropdafile)
 
 HTML5 Streaming file transfer server in node.js
 Live presentation: http://dropdafile.com
